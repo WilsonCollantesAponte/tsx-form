@@ -26,6 +26,7 @@ export default function App() {
 
   const addFive = () => dispatch({ type: "setCount", value: state.count + 5 });
   const reset = () => dispatch({ type: "reset" });
+  const add30 = () => dispatch({ type: "setCount", value: state.count + 30 });
 
   return (
     <div>
@@ -34,6 +35,7 @@ export default function App() {
       <p>Contador: {state.count}</p>
       <button onClick={addFive}>Sumar 5</button>
       <button onClick={reset}>Reiniciar</button>
+      <button onClick={add30}>Add 30</button>
     </div>
   );
 }
