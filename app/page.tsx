@@ -1,17 +1,17 @@
 "use client";
 
-import React, { MouseEventHandler, useState } from "react";
+import React, { useState } from "react";
 
 interface Data {
   username: string;
   password: string;
 }
 
-type RequestState =
-  | { status: "idle" }
-  | { status: "loading" }
-  | { status: "success"; data: any }
-  | { status: "error"; error: Error };
+// type RequestState =
+//   | { status: "idle" }
+//   | { status: "loading" }
+//   | { status: "success"; data: any }
+//   | { status: "error"; error: Error };
 
 export default function Home() {
   const [data, setData] = useState<Data>({
@@ -19,11 +19,10 @@ export default function Home() {
     password: "",
   });
 
-  const [requestState, setRequestState] = useState<RequestState>({
-    status: "idle",
-  });
+  // const [requestState, setRequestState] = useState<RequestState>({
+  //   status: "idle",
+  // });
 
-  // function handleData(event: React.ChangeEvent<HTMLInputElement>) {
   function handleData(event: React.ChangeEvent<HTMLInputElement>) {
     setData({ ...data, [event.target.name]: event.target.value });
   }
